@@ -216,7 +216,11 @@ button {
   text-transform: uppercase;
   color: var(--accent-color);
 }
-
+@media only screen and (min-width: 768px) {
+  .logotype-link-web {
+    margin-right: 120px;
+  }
+}
 .logotype-text {
   color: var(--accent-text);
 }
@@ -366,6 +370,12 @@ button {
   .js-menu-container {
     display: none;
   }
+  .menu-toggle {
+    display: none;
+  }
+  .js-open-menu {
+    display: none;
+  }
 }
 .nav-item {
   display: flex;
@@ -403,11 +413,21 @@ button {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-
-.address-item:not(:last-child) {
-  margin-right: 40px;
+@media screen and (min-width: 768px) {
+  .address-list {
+    display: block;
+  }
+  .address-item {
+    padding: 0;
+    margin: 0;
+  }
 }
 
+@media screen and (min-width: 1157px) {
+  .address-item:not(:last-child) {
+    margin-right: 40px;
+  }
+}
 .address-link {
   font-style: normal;
   font-weight: 400;
@@ -1413,12 +1433,15 @@ button {
   max-width: 408px;
   width: 100%;
   min-height: 576px;
-  transition-property: tranform;
-  transition: transform var;
+  transition: transform var(--transition-bezier);
   border-radius: 4px;
   box-shadow: var(--modal-shadow);
 }
-
+@media only screen and (max-width: 428px) {
+  .modal {
+    padding: 16px 16px 24px 16px;
+  }
+}
 .backdrop.is-hidden .modal {
   transform: translate(-50%, 50%) scale(0.1);
 }
@@ -1430,8 +1453,6 @@ button {
   margin-left: auto;
   margin-bottom: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  top: 24px;
-  right: 24px;
   background-color: var(--border-menu-button);
   width: 24px;
   height: 24px;
@@ -1449,7 +1470,7 @@ button {
 .form-title {
   display: block;
   text-align: center;
-  margin-bottom: 49px;
+  margin-bottom: 16px;
 }
 
 .form-label {
