@@ -498,6 +498,19 @@ button {
   }
 }
 /* ///MOBILE */
+
+/* .img{
+    srcset="photo.jpg 1x, photo@2x.jpg 2x"
+    src="photo.jpg"
+    alt="Опис зображення для усіх версій"/>
+  }
+  .header-one {
+    srcset="photo.jpg 1x, photo@2x.jpg 2x"
+    src="photo.jpg"
+    alt="Опис зображення для усіх версій"/>
+  } */
+
+/* TABLET */
 @media only screen and (min-width: 768px) {
   .hero-section {
     padding: 112px 0;
@@ -514,21 +527,22 @@ button {
     background-size: cover;
     text-align: center;
   }
-  /* .img{
-    srcset="photo.jpg 1x, photo@2x.jpg 2x"
-    src="photo.jpg"
-    alt="Опис зображення для усіх версій"/>
-  }
-  .header-one {
-    srcset="photo.jpg 1x, photo@2x.jpg 2x"
-    src="photo.jpg"
-    alt="Опис зображення для усіх версій"/>
-  } */
   .header-one {
     margin-bottom: 36px;
   }
 }
-/* TABLET */
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Dark-bg_hero-tab@2x@2x_result.jpg);
+  }
+}
 /* ///TABLET */
 /* DESCTOP */
 @media only screen and (min-width: 1157px) {
@@ -541,11 +555,22 @@ button {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office.jpg);
+      url(../images/people-office1_hero-desc@1x_result.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office1_hero-desc@2x_result.jpg);
   }
 }
 
