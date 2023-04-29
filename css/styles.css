@@ -457,45 +457,36 @@ button {
 */
 
 /* MOBILE HERO*/
-@media only screen and (max-width: 767px) {
-  .header-one {
-    width: 100%;
-    max-width: 320px;
-    font-size: 36px;
-    line-height: 1.1;
-    margin-bottom: 72px;
-  }
+.hero-section {
+  padding: 112px 0;
+  margin: 0 auto;
+  background-color: var(--accent-text);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Dark-bg_hero-mob@1x_result.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero-section {
-    padding: 112px 0;
-    margin: 0 auto;
-    background-color: var(--accent-text);
+    width: 100%;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/Dark-bg_hero-mob@1x_result.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    .hero-section {
-      width: 100%;
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/Dark-bg_hero-mob@2x_result.jpg);
-    }
+      url(../images/Dark-bg_hero-mob@2x_result.jpg);
   }
 }
 
 /* TABLET HERO*/
 
-@media only screen and (min-width: 768px), screen and (max-width: 1156px) {
+@media only screen and (min-width: 768px) {
   .hero-section {
     padding: 112px 0;
     margin: 0 auto;
@@ -511,9 +502,7 @@ button {
     background-size: cover;
     text-align: center;
   }
-  .header-one {
-    margin-bottom: 36px;
-  }
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -555,6 +544,22 @@ button {
         ),
         url(../images/people-office1_hero-desc@2x_result.jpg);
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header-one {
+    margin-bottom: 36px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-one {
+    width: 100%;
+    max-width: 320px;
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 72px;
   }
 }
 
